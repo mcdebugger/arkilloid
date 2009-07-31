@@ -1,9 +1,8 @@
 ##AC_INIT([src/main.cpp])
-AC_INIT([Arkilloid Level Editor],[0.0.1],[http://arkilloid.duganet.ru/],[arkilloid-leveledit])
-AM_INIT_AUTOMAKE([arkilloid-leveledit],[0.0.1])
+AC_INIT([Arkilloid],[0.0.3],[http://arkilloid.duganet.ru/],[arkilloid])
+AM_INIT_AUTOMAKE([arkilloid],[0.0.3])
 AC_PROG_CXX
 AC_PROG_MAKE_SET
-AM_CPPFLAGS=`freetype-config --cflags`
 ##AM_CONFIG_HEADER([src/config.h])
 
 AC_CHECK_LIB([SDL], [SDL_Init])
@@ -35,4 +34,13 @@ fi
 ##AC_SUBST(PDATADIR)
 ##AC_DEFINE_UNQUOTED([PDATADIR], [${PDATADIR}], [Package data dir])
 
-AC_OUTPUT([Makefile src/Makefile data/Makefile data/fonts/Makefile data/images/Makefile])
+AC_OUTPUT([ \
+	Makefile \
+	data/Makefile \
+	data/fonts/Makefile \
+	data/images/Makefile \
+	data/images/av-theme-v3/Makefile \
+	data/sounds/Makefile \
+	data/sounds/music/Makefile \
+	src/Makefile \
+	])
